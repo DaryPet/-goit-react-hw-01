@@ -22,12 +22,12 @@
 .friendStatus {
   margin: 0;
 }
-.online {
+.isOnline {
   color: green;
   margin: 0;
   font-size: 20px;
 }
-.offline {
+.isOffline {
   color: red;
   margin: 0;
   font-size: 20px;

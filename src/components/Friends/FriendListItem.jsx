@@ -1,8 +1,13 @@
 import styles from "./FriendListItem.module.css";
+import clsx from "clsx";
 
 export default function FriendListItem({
   friend: { avatar, name, isOnline, id },
 }) {
+  const statusClassNames = clsx(
+    styles.frienStatus,
+    isOnline ? styles.isOnline : styles.isOffline
+  );
   return (
     <div className={styles.card}>
       <img
@@ -12,13 +17,7 @@ export default function FriendListItem({
         width="48"
       />
       <p className={styles.friendName}>{name}</p>
-      <p className={styles.friendStatus}>
-        {isOnline ? (
-          <p className={styles.online}>Online</p>
-        ) : (
-          <p className={styles.offline}>Offline</p>
-        )}
-      </p>
+      <p className={statusClassNames}> {isOnline ? "Online" : "Offline"}</p>
     </div>
   );
 }
