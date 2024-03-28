@@ -1,29 +1,5 @@
-// //
-// import userData from "../../userData.json";
+import styles from "./Profile.module.css";
 
-// const userData = {
-//   username: "Jacques Gluke",
-//   tag: "jgluke",
-//   location: "Ocho Rios, Jamaica",
-//   avatar: "https://cdn-icons-png.flaticon.com/512/2922/2922506.png",
-//   stats: {
-//     followers: 5603,
-//     views: 4827,
-//     likes: 1308,
-//   },
-// };
-// export default function Profile(props) {
-//   return (
-//     <div>
-//       <div>
-//         <img src={userData.avatar} alt="User avatar" />
-//         <p>{props.amount}</p>
-//         <p>{userData.tag}</p>
-//         <p>{userData.location}</p>
-//       </div>
-//     </div>
-//   );
-// }
 export default function Profile({
   data: {
     username,
@@ -34,25 +10,25 @@ export default function Profile({
   },
 }) {
   return (
-    <div>
-      <div>
-        <img src={avatar} alt="User avatar" />
-        <p>{username}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
+    <div className={styles.profile}>
+      <div className={styles.profileInfo}>
+        <img className={styles.profileImg} src={avatar} alt="User avatar" />
+        <p className={styles.profileName}>{username}</p>
+        <p className={styles.profileTag}>@{tag}</p>
+        <p className={styles.profileLocation}>{location}</p>
       </div>
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{followers}</span>
+      <ul className={styles.profileList}>
+        <li className={styles.profiItems}>
+          <span className={styles.listDiscr}>Followers </span>
+          <span className={styles.listCount}>{followers}</span>
         </li>
-        <li>
-          <span>Views</span>
-          <span>{views}</span>
+        <li className={styles.profiItems}>
+          <span className={styles.listDiscr}>Views </span>
+          <span className={styles.listCount}>{views}</span>
         </li>
-        <li>
-          <span>Likes</span>
-          <span>{likes}</span>
+        <li className={styles.profiItems}>
+          <span className={styles.listDiscr}>Likes </span>
+          <span className={styles.listCount}>{likes}</span>
         </li>
       </ul>
     </div>
