@@ -24,10 +24,13 @@
   border: 2px solid black;
   color: black;
 }
-.data :nth-child(even) {
+/* .data :nth-child(even) {
   background-color: rgb(198, 197, 197);
-}
+} */
 .dataTypes {
   border: 2px solid black;
   padding: 4px 0;
+}
+tbody tr:nth-child(2n) {
+  background-color: rgb(198, 197, 197);
 }

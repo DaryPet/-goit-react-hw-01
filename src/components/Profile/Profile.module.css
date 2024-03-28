@@ -6,7 +6,7 @@
   border: 2px solid black;
   border-radius: 10px;
   width: 400px;
-  height: 400px;
+  /* height: 400px; */
   background-color: rgb(240, 238, 238);
 }
 .profileImg {
@@ -55,9 +55,11 @@
 .listDiscr {
   font-size: 20px;
   color: black;
+  margin-bottom: 0;
 }
 .listCount {
   font-size: 20px;
   font-weight: bold;
   color: black;
+  margin-bottom: 0;
 }
